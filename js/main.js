@@ -3,25 +3,13 @@
 section.classList.remove('collapsed'); */
 
 const kittenlist = document.querySelector('.js-list');
-const kittenone = `<li class="card">
-<article>
-  <img
-    class="card_img"
-    src="https://dev.adalab.es/gato-siames.webp"
-    alt="gatito"
-  />
-  <h3 class="card_title">Anastacio</h3>
-  <h4 class="card_race">Siamés</h4>
-  <p class="card_description">
-            Porte elegante, su patrón de color tan característico y sus ojos
-            de un azul intenso, pero su historia se remonta a Asía al menos
-            hace 500 años, donde tuvo su origen muy posiblemente.
-   </p>
-</article>
-</li>`;
+
+
+
+
 
 const kittentwo = `<li class="card">
-          <img class="card_img" src="https://dev.adalab.es/sphynx-gato.webp" alt="sphynx-cat" />
+         <img class="card_img" src="https://dev.adalab.es/sphynx-gato.webp" alt="sphynx-cat" />
           <h3 class="card_title">Fiona</h3>
           <h4 class="card_race">Sphynx</h4>
           <p class="card_description">
@@ -42,3 +30,34 @@ const kittenthree = `<li class="card">
           </p>
         </li>`;
 kittenlist.innerHTML = `${kittenone} ${kittentwo} ${kittenthree}`;
+
+
+const kittenImage1 = '<img src= "https://dev.adalab.es/gato-siames.webp" />';
+
+const kittenName1='Anastacio';
+
+const kittenDesc1= 'porte elegante, su patron de color tan caracterisitico y sus ojos de un azul intenso';
+
+const kittenRace1 = 'siamés';
+
+const kittenImage2 = '<img src="https://dev.adalab.es/sphynx-gato.webp" />';
+
+const kittenName2='Fiona';
+
+const kittenDesc2= 'Produce fascinacion y curiosidad. Exotico, raro, bello, extraño...hasta con pinta de alienigena han llegadoa  definir a esta razagatuna';
+
+const kittenRace2 = 'Sphynx';
+
+const kittenImage3 = 'https://dev.adalab.es/maine-coon-cat.webp"/>';
+
+const kittenName3='Cielo';
+
+const kittenDesc3= 'Tiene la cabeza cuadrada y los ojos simétricos, por lo que su bella mirada se ha convertido en unas de sus señas de identidad ';
+
+const kittenRace3 = 'Maine coon';
+
+const kittenOne.innerHTML = `${kittenImage1} ${kittenName1} ${kittenDesc1} ${kittenRace1}`;
+
+
+
+
