@@ -57,23 +57,34 @@ buttonplus.addEventListener('click', () => {
 const inputDesc = document.querySelector('.js-input-desc');
 const inputPhoto = document.querySelector('.js-input-photo');
 const inputName = document.querySelector('.js-input-name');
+const inputRace = document.querySelector('.js-input-race');
 const labelMessageError = document.querySelector('.js-label-error');
-const newButton= document.querySelector ('.js-btn-add')
-newButton.addEventListener('click',(event)=> {
+const newButton = document.querySelector('.js-btn-add');
+newButton.addEventListener('click', (event) => {
   event.preventDefault();
 
-const valueDesc = inputDesc.value;
-const valuePhoto = inputPhoto.value;
-const valueName = inputName.value;
-  
-  
-if (valueDesc === '' || valuePhoto === '' || valueName === '') {
-labelMessageError.innerHTML='uy!parece que has olvidado algo';
-}
+  const valueDesc = inputDesc.value;
+  const valuePhoto = inputPhoto.value;
+  const valueName = inputName.value;
+
+  if (valueDesc === '' || valuePhoto === '' || valueName === '') {
+    labelMessageError.innerHTML = 'uy!parece que has olvidado algo';
+  }
 });
 
+const canxbtn = document.querySelector('.js-btn-cancel');
+canxbtn.addEventListener('click', (event) => {
+  event.preventDefault();
+  inputDesc.value = '';
+  inputPhoto.value = '';
+  inputName.value = '';
+  inputRace.value = '';
+  formElement.classList.add('collapsed');
+});
 
-
-
-
-
+const showNewCatForm = document.querySelector('.buttonplus');
+showNewCatForm.addEventListener('click', (event) => {
+  event.preventDefault();
+  formElement.classList.remove('collapsed');
+  console.log('hola');
+});
