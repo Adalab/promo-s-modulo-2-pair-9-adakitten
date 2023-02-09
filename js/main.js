@@ -82,9 +82,25 @@ canxbtn.addEventListener('click', (event) => {
   formElement.classList.add('collapsed');
 });
 
-const showNewCatForm = document.querySelector('.buttonplus');
-showNewCatForm.addEventListener('click', (event) => {
+// const showNewCatForm = document.querySelector('.buttonplus');
+// showNewCatForm.addEventListener('click', (event) => {
+  // event.preventDefault();
+  // formElement.classList.remove('collapsed'); 
+// });
+
+linkNewFormElement.addEventListener('click', handleClickNewCatForm);
+const newFormElemnt = document.querySelector('.buttonplus');
+function handleClickNewCatForm(event) {
   event.preventDefault();
-  formElement.classList.remove('collapsed');
-  console.log('hola');
-});
+  if (newFormElement.classList.contains('collapsed')) {
+  showNewCatForm ()
+  } else {
+  hideNewCatForm ()
+  }
+}
+function showNewCatForm() {
+  newFormElement.classList.remove('collapsed');
+}
+function hideNewCatForm() {
+  newFormElement.classList.add('collapsed');
+}
